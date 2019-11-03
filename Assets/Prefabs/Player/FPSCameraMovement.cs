@@ -12,22 +12,30 @@ public class FPSCameraMovement : MonoBehaviour
 
     private float mouseX;
     private float mouseY;
+    private float xRotation;
 
-    //TODO ograniczyc patrzenie w gore bo mozna fikolka zrobic
+    void Start()
+    {
+        //command to lock the white windows cursor
+        Cursor.lockState = CursorLockMode.Locked; 
+    }
+
     void Update()
     {
         //zwroccie uwage na to ze do zarzadzania kamera obracam nie tylko sama kamera, ale 
         //takze graczem. Robie to dlatego, ze gdy obracalem kamera po X i Y to kamera obracala
         //sie takze po Z jest to nie intuicyjne, ale poobracajcie sobie kostke po X i Y 
         //w edytorze unity a zobaczycie, ze to faktyczne zachowanie 3D obiektow.
-
-        //deltaTime https://www.youtube.com/watch?v=Gcoj3llfzSw&list=PLX2vGYjWbI0S9-X2Q021GUtolTqbUBB9B&index=19
-        //GetAxis https://www.youtube.com/watch?v=MK4OmsViqMA&list=PLX2vGYjWbI0S9-X2Q021GUtolTqbUBB9B&index=16
-        //transform.Rotate https://www.youtube.com/watch?v=32JkMANaMpk&list=PLX2vGYjWbI0S9-X2Q021GUtolTqbUBB9B&index=12s
+        
         mouseX = Input.GetAxis("Mouse X")*mousesSensitivity*Time.deltaTime;
         mouseY = Input.GetAxis("Mouse Y")*mousesSensitivity*Time.deltaTime;
-        player.transform.Rotate(0, mouseX, 0); //operujemy na zewnętrznym obiekcie
-        transform.Rotate(-mouseY, 0, 0); //operujemy na obiekcie do którego jest ten skrypt przyczepiony
+
+        //Locking the horizontal camera rotation to 90 degrees.
+        xRotation -= mouseY;
+        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+
+        player.transform.Rotate(0, mouseX, 0);
+        transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         
     }
 }

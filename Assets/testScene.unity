@@ -38,13 +38,13 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.45077056, g: 0.498931, b: 0.56525093, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 1
+  m_GIWorkflowMode: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -140,7 +140,7 @@ PrefabInstance:
     - target: {fileID: 3038713285214587316, guid: c1ffdc9c335ecbe4c86bc3dd39c3213a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3038713285214587316, guid: c1ffdc9c335ecbe4c86bc3dd39c3213a,
         type: 3}
@@ -187,21 +187,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3038713286818681658, guid: c1ffdc9c335ecbe4c86bc3dd39c3213a,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3038713286818681658, guid: c1ffdc9c335ecbe4c86bc3dd39c3213a,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3038713286818681658, guid: c1ffdc9c335ecbe4c86bc3dd39c3213a,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1ffdc9c335ecbe4c86bc3dd39c3213a, type: 3}
 --- !u!1001 &1509483684
@@ -224,7 +209,7 @@ PrefabInstance:
     - target: {fileID: 898415241577613582, guid: 9de6571ed8adf5845a0203cdb570cef0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 11.42
       objectReference: {fileID: 0}
     - target: {fileID: 898415241577613582, guid: 9de6571ed8adf5845a0203cdb570cef0,
         type: 3}

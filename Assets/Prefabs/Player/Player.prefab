@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 93798785}
   - component: {fileID: 93798788}
   - component: {fileID: 93798787}
-  - component: {fileID: 93798786}
   m_Layer: 0
   m_Name: PlayerBody
   m_TagString: Untagged
@@ -79,20 +78,36 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &93798786
-CapsuleCollider:
+--- !u!1 &624209770
+GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 93798784}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 624209771}
+  m_Layer: 0
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &624209771
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624209770}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.72, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 898415241577613582}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3565443491894700400
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,6 +246,7 @@ Transform:
   - {fileID: 6117258177531239284}
   - {fileID: 3826751313018868362}
   - {fileID: 93798785}
+  - {fileID: 624209771}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -264,7 +280,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7fcf97e716b13547a6f58cf9a8583b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 5
+  gravity: -0.981
+  controller: {fileID: 570307112031113575}
+  groundCheck: {fileID: 624209771}
+  groundDistance: 0.4
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &8745717645228347398
 GameObject:
   m_ObjectHideFlags: 0
