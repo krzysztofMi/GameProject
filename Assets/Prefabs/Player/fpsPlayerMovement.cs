@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class fpsPlayerMovement : MonoBehaviour
 {
-    public float speed = 1.0f; //gdy damy public to pojawia się nowe pole w inspektorze tam gdzie
+    public float speed = 4.0f; //gdy damy public to pojawia się nowe pole w inspektorze tam gdzie
     //skrypt jest przyczepiony. 1 Domyślna wartość
     private float h, v;
-
+    
     // Update is called once per frame
     void Update()
     {
