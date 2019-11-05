@@ -13,7 +13,7 @@ public class fpsPlayerMovement : MonoBehaviour
     public float jumpSpeed = 15f;
 
     public float groundDistance = 0.4f;
-    public LayerMask groundMask;
+    private LayerMask groundMask;
 
     private Vector3 move;
     private bool isGrounded;
@@ -21,9 +21,10 @@ public class fpsPlayerMovement : MonoBehaviour
     private CharacterController controller;
     private void Start()
     {
-        GameObject gobject = GameObject.Find("GroundCheck");
+        GameObject gobject = GameObject.Find("PlayerGroundCheck");
         groundCheck = gobject.transform;
         controller = GetComponent<CharacterController>();
+        groundMask = LayerMask.GetMask("Ground");
         move = new Vector3(0.0f, 0.0f, 0.0f);
     }
 
