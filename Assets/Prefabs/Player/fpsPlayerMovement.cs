@@ -8,13 +8,12 @@ using UnityEngine;
 //gravity based on this video https://www.youtube.com/watch?v=_QajrabyTJc
 public class fpsPlayerMovement : MonoBehaviour
 {
-    public float speed = 5.0f;
+    public float speed = 10.0f;
     public float gravity = -9.81f * 0.1f;
     public CharacterController controller;
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
-
     Vector3 velocity;
     float h, v;
     bool isGrounded;
@@ -22,10 +21,8 @@ public class fpsPlayerMovement : MonoBehaviour
     void Update()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-
         if (isGrounded == true) //(isGrounded && velocity.y < 0)
             velocity.y = gravity / 8;
-
         h = Input.GetAxis("Horizontal")*speed*Time.deltaTime;
         v = Input.GetAxis("Vertical")*speed*Time.deltaTime;
         Vector3 move = transform.right * h + transform.forward * v;
