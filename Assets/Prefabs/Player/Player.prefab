@@ -88,7 +88,7 @@ GameObject:
   m_Component:
   - component: {fileID: 624209771}
   m_Layer: 0
-  m_Name: GroundCheck
+  m_Name: PlayerGroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -284,9 +284,6 @@ MonoBehaviour:
   gravity: -0.981
   jumpSpeed: 21
   groundDistance: 0.4
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 256
 --- !u!1 &8745717645228347398
 GameObject:
   m_ObjectHideFlags: 0
