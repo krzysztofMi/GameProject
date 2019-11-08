@@ -14,11 +14,6 @@ public class FPSCameraMovement : MonoBehaviour
     private float mouseY;
     private float xRotation;
 
-    void Start()
-    {
-        //command to lock the white windows cursor
-        Cursor.lockState = CursorLockMode.Locked; 
-    }
 
     void Update()
     {
@@ -34,8 +29,8 @@ public class FPSCameraMovement : MonoBehaviour
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
-        player.transform.Rotate(0, mouseX, 0);
-        transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+        player.transform.Rotate(0, mouseX, 0); //rotating the player
+        transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f); //rotating the camera
         
     }
 }
