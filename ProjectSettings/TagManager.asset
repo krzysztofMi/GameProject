@@ -13,6 +13,7 @@ TagManager:
   - UI
   - 
   - 
+  - Ground
   - 
   - 
   - 
@@ -35,8 +36,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - weapon
   m_SortingLayers:
   - name: Default
     uniqueID: 0
