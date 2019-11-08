@@ -9,33 +9,41 @@ public class cameraSwitcher : MonoBehaviour
     private GameObject fpsCamera1;
 
 
-    // Start is called before the first frame update
     void Awake()
     {
+        //I'm assigning value to these at the beginning and passing them to functions
+        // so that unity will search for them only once
         player1 = GameObject.Find("Player1");
         fpsCamera1 = player1.transform.Find("PlayerCamera").gameObject;
         RTSCamera = transform.Find("RTSCamera").gameObject;
 
-        fpsCamera1.SetActive(false);
-        RTSCamera.SetActive(true);
-        player1.GetComponent<fpsPlayerMovement>().enabled = false;
+        playerView(player1, fpsCamera1);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetButton("1"))
         {
-            fpsCamera1.SetActive(true);
-            RTSCamera.SetActive(false);
-            player1.GetComponent<fpsPlayerMovement>().enabled = true;
+            playerView(player1, fpsCamera1);
         }
         if (Input.GetButton("`"))
         {
-            fpsCamera1.SetActive(false);
-            RTSCamera.SetActive(true);
-            player1.GetComponent<fpsPlayerMovement>().enabled = false;
+            rtsView();
         }
         
+    }
+
+
+    private void playerView(GameObject player, GameObject fpsCamera){
+        fpsCamera.SetActive(true);
+        RTSCamera.SetActive(false);
+        player.GetComponent<fpsPlayerMovement>().enabled = true;
+        Cursor.lockState = CursorLockMode.Locked;
+    } 
+    private void rtsView(){
+        fpsCamera1.SetActive(false);
+        RTSCamera.SetActive(true);
+        player1.GetComponent<fpsPlayerMovement>().enabled = false;
+        Cursor.lockState = CursorLockMode.None;
     }
 }
