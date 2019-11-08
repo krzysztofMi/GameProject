@@ -508,6 +508,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD:Assets/testScene.unity
     - target: {fileID: 3038713286920686682, guid: c1ffdc9c335ecbe4c86bc3dd39c3213a,
         type: 3}
       propertyPath: m_LocalScale.y
@@ -523,6 +524,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (2)
       objectReference: {fileID: 0}
+=======
+>>>>>>> 7169b443bfc2278def666800dabea15fb786e060:Assets/testSceneKarol.unity
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1ffdc9c335ecbe4c86bc3dd39c3213a, type: 3}
 --- !u!1001 &1509483684
@@ -535,7 +538,7 @@ PrefabInstance:
     - target: {fileID: 7553391772830285913, guid: 9de6571ed8adf5845a0203cdb570cef0,
         type: 3}
       propertyPath: m_Name
-      value: Player
+      value: Player1
       objectReference: {fileID: 0}
     - target: {fileID: 898415241577613582, guid: 9de6571ed8adf5845a0203cdb570cef0,
         type: 3}
@@ -592,8 +595,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 624209770, guid: 9de6571ed8adf5845a0203cdb570cef0, type: 3}
+      propertyPath: m_Name
+      value: PlayerGroundCheck
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9de6571ed8adf5845a0203cdb570cef0, type: 3}
+<<<<<<< HEAD:Assets/testScene.unity
 --- !u!1 &1962695759
 GameObject:
   m_ObjectHideFlags: 0
@@ -667,3 +675,74 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1962695759}
   m_CullTransparentMesh: 0
+=======
+--- !u!1001 &1582045923864348320
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1582045923116414413, guid: 91283fe480c204543a3052de318b3755,
+        type: 3}
+      propertyPath: m_Name
+      value: CameraSwitcher
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582045923116414415, guid: 91283fe480c204543a3052de318b3755,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582045923116414415, guid: 91283fe480c204543a3052de318b3755,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 11.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582045923116414415, guid: 91283fe480c204543a3052de318b3755,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582045923116414415, guid: 91283fe480c204543a3052de318b3755,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582045923116414415, guid: 91283fe480c204543a3052de318b3755,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582045923116414415, guid: 91283fe480c204543a3052de318b3755,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582045923116414415, guid: 91283fe480c204543a3052de318b3755,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582045923116414415, guid: 91283fe480c204543a3052de318b3755,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582045923116414415, guid: 91283fe480c204543a3052de318b3755,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582045923116414415, guid: 91283fe480c204543a3052de318b3755,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582045923116414415, guid: 91283fe480c204543a3052de318b3755,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 91283fe480c204543a3052de318b3755, type: 3}
+>>>>>>> 7169b443bfc2278def666800dabea15fb786e060:Assets/testSceneKarol.unity
