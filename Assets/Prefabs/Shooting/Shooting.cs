@@ -5,6 +5,7 @@ public class Shooting : MonoBehaviour
 {
 
     public float damage = 10f;
+    public float destroyTime;
     public Camera cam;
     public GameObject slad;
     // Start is called before the first frame update
@@ -12,7 +13,6 @@ public class Shooting : MonoBehaviour
     {
 
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -36,7 +36,7 @@ public class Shooting : MonoBehaviour
                 Debug.Log("Pozostałe życie: "+ target.health);
             }
             GameObject obiekt=Instantiate(slad, hit.point, Quaternion.LookRotation(hit.normal));
-            Destroy(obiekt, 3f);
+            Destroy(obiekt, destroyTime);
         }
     }
 }

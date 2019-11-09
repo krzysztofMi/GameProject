@@ -1,0 +1,7 @@
+Obiekty ze skryptem "Target" otrzymują pewną ilość HP i mogą być zniszczone.
+Czerwone kwadraty go mają i są zniszczalne.
+
+Zmiana broni na cyfry na klawiaturze
+1 - gun
+2 - gum gun
+3 - grenade thrower
