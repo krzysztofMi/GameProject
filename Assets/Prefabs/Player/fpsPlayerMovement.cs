@@ -8,10 +8,10 @@ using UnityEngine;
 //gravity based on this video https://www.youtube.com/watch?v=_QajrabyTJc
 public class fpsPlayerMovement : MonoBehaviour
 {
-    public float speed = 10.0f;
+    public float speed = 5.0f;
     public float gravity = -9.81f * 0.1f;
     public float jumpSpeed = 15f;
-    public float groundDistance = 0.4f;
+    public float groundDistance = 4.4f;
     
     private LayerMask groundMask;
     private Vector3 move;
@@ -41,6 +41,11 @@ public class fpsPlayerMovement : MonoBehaviour
             if (Input.GetButton("Jump"))
             {
                 move.y += jumpSpeed;
+            }
+            if (Input.GetKey((KeyCode.LeftShift)))
+            {
+                move.x *= 2;
+                move.z *= 2;
             }
         }
 

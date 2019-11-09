@@ -701,16 +701,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5377074356786702018, guid: 9de6571ed8adf5845a0203cdb570cef0,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 37082b65dd737274c96ef639bd83f1e5, type: 2}
-    - target: {fileID: 6641999444991226311, guid: 9de6571ed8adf5845a0203cdb570cef0,
-        type: 3}
-      propertyPath: m_Name
-      value: GrenadeThrower
-      objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: cam
       value: 
@@ -720,6 +710,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player1
       objectReference: {fileID: 0}
+    - target: {fileID: 6641999444991226311, guid: 9de6571ed8adf5845a0203cdb570cef0,
+        type: 3}
+      propertyPath: m_Name
+      value: GrenadeThrower
+      objectReference: {fileID: 0}
+    - target: {fileID: 5377074356786702018, guid: 9de6571ed8adf5845a0203cdb570cef0,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 37082b65dd737274c96ef639bd83f1e5, type: 2}
     - target: {fileID: 5540742994030846573, guid: 9de6571ed8adf5845a0203cdb570cef0,
         type: 3}
       propertyPath: m_Name
@@ -804,6 +804,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 898415241577613582, guid: 9de6571ed8adf5845a0203cdb570cef0,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 624209770, guid: 9de6571ed8adf5845a0203cdb570cef0, type: 3}
       propertyPath: m_Name
