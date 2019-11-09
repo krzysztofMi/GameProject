@@ -6,6 +6,7 @@ public class Shooting : MonoBehaviour
 
     public float damage = 10f;
     public Camera cam;
+    public GameObject slad;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,7 @@ public class Shooting : MonoBehaviour
 
     void Shoot()
     {
+        Debug.Log("Strzelanie");
         RaycastHit hit;
         if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit))
         {
@@ -33,6 +35,8 @@ public class Shooting : MonoBehaviour
                 target.TakeDamage(damage);
                 Debug.Log("Pozostałe życie: "+ target.health);
             }
+            GameObject obiekt=Instantiate(slad, hit.point, Quaternion.LookRotation(hit.normal));
+            Destroy(obiekt, 3f);
         }
     }
 }
