@@ -822,7 +822,7 @@ PrefabInstance:
     - target: {fileID: 9065512398566722290, guid: 9de6571ed8adf5845a0203cdb570cef0,
         type: 3}
       propertyPath: m_Name
-      value: GumGun
+      value: Jerzy
       objectReference: {fileID: 0}
     - target: {fileID: 3759356345307809056, guid: 9de6571ed8adf5845a0203cdb570cef0,
         type: 3}

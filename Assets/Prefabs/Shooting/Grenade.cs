@@ -7,6 +7,7 @@ public class Grenade : MonoBehaviour
     public float delay = 3f;
     public float radius = 5f;
     public float damage = 20f;
+    public GameObject explosion;
     float countdown;
     bool exploded = false;
     // Start is called before the first frame update
@@ -29,7 +30,8 @@ public class Grenade : MonoBehaviour
     {
         Debug.Log("Boom");
         Collider [] col = Physics.OverlapSphere(transform.position,radius);
-        foreach(Collider obj in col)
+        GameObject temp = Instantiate(explosion, transform.position, Quaternion.identity);
+        foreach (Collider obj in col)
         {
             Target t = obj.GetComponent<Target>();
             if(t!=null)
@@ -39,5 +41,6 @@ public class Grenade : MonoBehaviour
             }
         }
         Destroy(gameObject);
+        Destroy(temp, 1f);
     }
 }
