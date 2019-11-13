@@ -7,6 +7,7 @@ public class GrenadeThrower : MonoBehaviour
     // Start is called before the first frame update
     public float throwForce = 40f;
     public GameObject grenObj;
+    public Camera cam;
     // Update is called once per frame
     void Update()
     {
@@ -19,6 +20,6 @@ public class GrenadeThrower : MonoBehaviour
     {
         GameObject gren=Instantiate(grenObj, transform.position, transform.rotation);
         Rigidbody rb = gren.GetComponent<Rigidbody>();
-        rb.AddForce(transform.forward * throwForce,ForceMode.VelocityChange);
+        rb.AddForce(cam.transform.forward * throwForce,ForceMode.VelocityChange);
     }
 }

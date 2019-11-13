@@ -246,6 +246,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   throwForce: 20
   grenObj: {fileID: 9149679272354212934, guid: 0eeb299f359b519429846f8324b2629e, type: 3}
+  cam: {fileID: 737094297}
 --- !u!1001 &270149752
 PrefabInstance:
   m_ObjectHideFlags: 0
