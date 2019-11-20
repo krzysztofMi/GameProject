@@ -13,7 +13,7 @@ public class cameraSwitcher : MonoBehaviour
     {
         //I'm assigning value to these at the beginning and passing them to functions
         // so that unity will search for them only once
-        player1 = GameObject.Find("Player1");
+        player1 = GameObject.Find("Player");
         fpsCamera1 = player1.transform.Find("PlayerCamera").gameObject;
         RTSCamera = transform.Find("RTSCamera").gameObject;
 

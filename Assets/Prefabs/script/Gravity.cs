@@ -14,8 +14,7 @@ public class Gravity : MonoBehaviour
     private Vector3 velocity;
     void Start()
     {
-        GameObject gobject = GameObject.Find("CubeGroundCheck");
-        groundCheck = gobject.transform;
+        groundCheck = GameObject.FindGameObjectWithTag("groundCheck").transform;
         groundMask = LayerMask.GetMask("Ground");
      
     }

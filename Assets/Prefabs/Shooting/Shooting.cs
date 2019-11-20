@@ -6,12 +6,12 @@ public class Shooting : MonoBehaviour
 
     public float damage = 10f;
     public float destroyTime;
-    public Camera cam;
+    private Camera cam;
     public GameObject slad;
     // Start is called before the first frame update
     void Start()
     {
-
+        cam = GameObject.Find("mainCamera").GetComponent<Camera>();
     }
     // Update is called once per frame
     void Update()
