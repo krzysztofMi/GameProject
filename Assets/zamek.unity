@@ -744,6 +744,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6641999444991226311, guid: 9de6571ed8adf5845a0203cdb570cef0,
+        type: 3}
+      propertyPath: m_Name
+      value: GrenadeThrower
+      objectReference: {fileID: 0}
     - target: {fileID: 898415241577613582, guid: 9de6571ed8adf5845a0203cdb570cef0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -827,11 +832,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Gun
-      objectReference: {fileID: 0}
-    - target: {fileID: 6641999444991226311, guid: 9de6571ed8adf5845a0203cdb570cef0,
-        type: 3}
-      propertyPath: m_Name
-      value: GrenadeThrower
       objectReference: {fileID: 0}
     - target: {fileID: 3078840136253150011, guid: 9de6571ed8adf5845a0203cdb570cef0,
         type: 3}
@@ -1015,6 +1015,11 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 6bb287418a044564aabfc56e3ecbe42e,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7808381318373605236, guid: 6bb287418a044564aabfc56e3ecbe42e,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
