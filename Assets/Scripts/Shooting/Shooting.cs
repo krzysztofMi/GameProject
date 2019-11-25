@@ -29,11 +29,11 @@ public class Shooting : MonoBehaviour
         if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit))
         {
             Debug.Log("Namierzony obiekt: " + hit.transform.name);
-            Target target = hit.transform.GetComponent<Target>();
+            ITarget target = hit.transform.GetComponent<ITarget>();
             if(target!=null)
             {
                 target.TakeDamage(damage);
-                Debug.Log("Pozostałe życie: "+ target.health);
+                Debug.Log("Pozostałe życie: "+ target.getHealth());
             }
             GameObject obiekt=Instantiate(slad, hit.point, Quaternion.LookRotation(hit.normal));
             Destroy(obiekt, destroyTime);

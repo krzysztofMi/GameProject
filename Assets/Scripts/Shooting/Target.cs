@@ -2,32 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Target : MonoBehaviour
+public class Target : MonoBehaviour, ITarget
 {
-    public float health = 50f;
-    public Vector3 startPosition;
+    public float health = 50.0f;
 
-
-    public void Start()
+    public float getHealth()
     {
-        startPosition = transform.position;
+        return health;
     }
-    public void TakeDamage(float dmg)
+
+    public void setHealth(float health)
     {
-        health -= dmg;
-        if(health<=0)
+        this.health = health;
+    }
+
+    public void TakeDamage(float takenDmg)
+    {
+        health -= takenDmg;
+        if (health <= 0)
         {
             Destroy(gameObject);
         }
-    }
-
-    public void playerTakeDamage(float dmg)
-    {
-        health -= dmg;
-        if (health <= 0)
-        {
-            transform.position = startPosition;
-        }
-
     }
 }
