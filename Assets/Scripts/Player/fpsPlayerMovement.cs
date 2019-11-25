@@ -8,7 +8,7 @@ using UnityEngine;
 //gravity based on this video https://www.youtube.com/watch?v=_QajrabyTJc
 public class fpsPlayerMovement : MonoBehaviour
 {
-    public float speed = 5.0f;
+    public float Speed = 5.0f;
     public float gravity = -9.81f * 0.1f;
     public float jumpSpeed = 15f;
     public float groundDistance = 4.4f;
@@ -18,6 +18,8 @@ public class fpsPlayerMovement : MonoBehaviour
     private bool isGrounded;
     private Transform groundCheck;
     private CharacterController controller;
+    private float speed;
+    
     private void Start()
     {
         GameObject gobject = GameObject.Find("PlayerGroundCheck");
@@ -25,6 +27,7 @@ public class fpsPlayerMovement : MonoBehaviour
         controller = GetComponent<CharacterController>();
         groundMask = LayerMask.GetMask("Ground");
         move = new Vector3(0.0f, 0.0f, 0.0f);
+        speed = 5.0f;
     }
 
     void Update()
@@ -37,12 +40,16 @@ public class fpsPlayerMovement : MonoBehaviour
 
         if (isGrounded == true)
         { //(isGrounded && velocity.y < 0)
+            speed = Speed;
             move.y = gravity / 8;
             if (Input.GetButton("Jump"))
             {
                 move.y += jumpSpeed;
+                if(Input.GetButton("LeftShift")){
+                    speed=speed*2;
+                }
             }
-            if (Input.GetKey((KeyCode.LeftShift)))
+            if (Input.GetButton("LeftShift"))
             {
                 move.x *= 2;
                 move.z *= 2;
