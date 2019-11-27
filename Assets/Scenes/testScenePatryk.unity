@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.45077097, g: 0.49893135, b: 0.56525135, a: 1}
+  m_IndirectSpecularColor: {r: 0.45077056, g: 0.49893045, b: 0.5652505, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  startPosition: {x: 0, y: 0, z: 0}
 --- !u!65 &66062901
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -523,6 +524,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  startPosition: {x: 0, y: 0, z: 0}
 --- !u!65 &941026312
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -711,6 +713,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6641999444991226311, guid: 9de6571ed8adf5845a0203cdb570cef0,
+        type: 3}
+      propertyPath: m_Name
+      value: GrenadeThrower
+      objectReference: {fileID: 0}
     - target: {fileID: 898415241577613582, guid: 9de6571ed8adf5845a0203cdb570cef0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -795,11 +802,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gun
       objectReference: {fileID: 0}
-    - target: {fileID: 6641999444991226311, guid: 9de6571ed8adf5845a0203cdb570cef0,
-        type: 3}
-      propertyPath: m_Name
-      value: GrenadeThrower
-      objectReference: {fileID: 0}
     - target: {fileID: 3078840136253150011, guid: 9de6571ed8adf5845a0203cdb570cef0,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -838,7 +840,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1509483684}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1971480588
+--- !u!114 &1971480585
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -846,6 +848,22 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1971480583}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e800757a22129942b39e6b5a1e70064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  speed: 50
+  destroyTime: 0
+  bullet: {fileID: 8419603094461637017, guid: e8dcb043263196a4b8116a8418fdad10, type: 3}
+--- !u!114 &1971480588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1971480583}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 19fbb33c650c9a144ba78f4504085dfa, type: 3}
   m_Name: 
@@ -886,6 +904,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  startPosition: {x: 0, y: 0, z: 0}
 --- !u!65 &2051837872
 BoxCollider:
   m_ObjectHideFlags: 0

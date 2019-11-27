@@ -1,7 +1,7 @@
 ﻿
 using UnityEngine;
 
-public class Shooting : MonoBehaviour
+public class Hitscan : MonoBehaviour
 {
 
     public float damage = 10f;

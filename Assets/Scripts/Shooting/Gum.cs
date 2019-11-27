@@ -8,11 +8,11 @@ public class Gum : MonoBehaviour
     float x = 0;
     bool zmiejszanie = true;
     // Start is called before the first frame update
+    Vector3 vec = Vector3.one;
     void Start()
     {
         
     }
-    Vector3 vec = Vector3.one;
     // Update is called once per frame
     void Update()
     {
