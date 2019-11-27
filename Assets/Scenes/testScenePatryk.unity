@@ -149,7 +149,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 66062899}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 613e05b6bc5040e44a266cba7c956518, type: 3}
+  m_Script: {fileID: 11500000, guid: 85a9606beb063074fa9d71667793768e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
@@ -520,7 +520,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 941026310}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 613e05b6bc5040e44a266cba7c956518, type: 3}
+  m_Script: {fileID: 11500000, guid: 85a9606beb063074fa9d71667793768e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
@@ -713,11 +713,32 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+=======
+    - target: {fileID: 5540742994030846573, guid: 9de6571ed8adf5845a0203cdb570cef0,
+        type: 3}
+      propertyPath: m_Name
+      value: Weapon
+      objectReference: {fileID: 0}
+>>>>>>> 4165159e84c3591818357ae926ca4874fbc9a045
     - target: {fileID: 6641999444991226311, guid: 9de6571ed8adf5845a0203cdb570cef0,
         type: 3}
       propertyPath: m_Name
       value: GrenadeThrower
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+=======
+    - target: {fileID: 9065512398566722290, guid: 9de6571ed8adf5845a0203cdb570cef0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9065512398566722290, guid: 9de6571ed8adf5845a0203cdb570cef0,
+        type: 3}
+      propertyPath: m_Name
+      value: Jerzy
+      objectReference: {fileID: 0}
+>>>>>>> 4165159e84c3591818357ae926ca4874fbc9a045
     - target: {fileID: 898415241577613582, guid: 9de6571ed8adf5845a0203cdb570cef0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -781,21 +802,6 @@ PrefabInstance:
     - target: {fileID: 624209770, guid: 9de6571ed8adf5845a0203cdb570cef0, type: 3}
       propertyPath: m_Name
       value: PlayerGroundCheck
-      objectReference: {fileID: 0}
-    - target: {fileID: 5540742994030846573, guid: 9de6571ed8adf5845a0203cdb570cef0,
-        type: 3}
-      propertyPath: m_Name
-      value: Weapon
-      objectReference: {fileID: 0}
-    - target: {fileID: 9065512398566722290, guid: 9de6571ed8adf5845a0203cdb570cef0,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9065512398566722290, guid: 9de6571ed8adf5845a0203cdb570cef0,
-        type: 3}
-      propertyPath: m_Name
-      value: Jerzy
       objectReference: {fileID: 0}
     - target: {fileID: 2610582415346065468, guid: 9de6571ed8adf5845a0203cdb570cef0,
         type: 3}
@@ -900,7 +906,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2051837870}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 613e05b6bc5040e44a266cba7c956518, type: 3}
+  m_Script: {fileID: 11500000, guid: 85a9606beb063074fa9d71667793768e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50

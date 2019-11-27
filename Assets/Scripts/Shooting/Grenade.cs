@@ -33,11 +33,11 @@ public class Grenade : MonoBehaviour
         GameObject temp = Instantiate(explosion, transform.position, Quaternion.identity);
         foreach (Collider obj in col)
         {
-            Target t = obj.GetComponent<Target>();
+            ITarget t = obj.GetComponent<ITarget>();
             if(t!=null)
             {
                 t.TakeDamage(damage);
-                Debug.Log("Pozostałe życie: " + t.health);
+                Debug.Log("Pozostałe życie: " + t.getHealth());
             }
         }
         Destroy(gameObject);

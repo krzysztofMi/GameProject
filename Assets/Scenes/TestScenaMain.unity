@@ -419,6 +419,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gravity: -0.98100007
   groundDistance: 0.2
+--- !u!1 &443097320 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7553391772830285913, guid: 9de6571ed8adf5845a0203cdb570cef0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1854576032}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &443097322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443097320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 019d6c31ca4dd784ea95f5033e9b426c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
 --- !u!1 &505011424
 GameObject:
   m_ObjectHideFlags: 0
@@ -1273,10 +1292,10 @@ GameObject:
   - component: {fileID: 1311283972}
   - component: {fileID: 1311283971}
   - component: {fileID: 1311283970}
+  - component: {fileID: 1311283976}
+  - component: {fileID: 1311283975}
   - component: {fileID: 1311283969}
   - component: {fileID: 1311283974}
-  - component: {fileID: 1311283975}
-  - component: {fileID: 1311283976}
   m_Layer: 0
   m_Name: enemy
   m_TagString: Untagged
@@ -1297,7 +1316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gravity: -0.98100007
-  groundDistance: 0.2
+  groundDistance: 0.4
 --- !u!136 &1311283970
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1383,12 +1402,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1311283968}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85a9606beb063074fa9d71667793768e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
+--- !u!114 &1311283975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311283968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3feb7b0d399ba81408ea05aed0f908fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectToFollow: {fileID: 0}
-  movementSpeed: 5
---- !u!114 &1311283975
+  movementSpeed: 4
+--- !u!114 &1311283976
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1400,20 +1432,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03813fe18eab2724cbd827f4b2d6db4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 5
   attackedObject: {fileID: 0}
---- !u!114 &1311283976
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1311283968}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 613e05b6bc5040e44a266cba7c956518, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
 --- !u!1 &1339850807
 GameObject:
   m_ObjectHideFlags: 0
@@ -1795,6 +1815,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5540742994030846573, guid: 9de6571ed8adf5845a0203cdb570cef0,
+        type: 3}
+      propertyPath: m_Name
+      value: Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 6641999444991226311, guid: 9de6571ed8adf5845a0203cdb570cef0,
+        type: 3}
+      propertyPath: m_Name
+      value: GrenadeThrower
+      objectReference: {fileID: 0}
+    - target: {fileID: 9065512398566722290, guid: 9de6571ed8adf5845a0203cdb570cef0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9065512398566722290, guid: 9de6571ed8adf5845a0203cdb570cef0,
+        type: 3}
+      propertyPath: m_Name
+      value: Jerzy
+      objectReference: {fileID: 0}
     - target: {fileID: 898415241577613582, guid: 9de6571ed8adf5845a0203cdb570cef0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1859,30 +1899,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerGroundCheck
       objectReference: {fileID: 0}
-    - target: {fileID: 5540742994030846573, guid: 9de6571ed8adf5845a0203cdb570cef0,
-        type: 3}
-      propertyPath: m_Name
-      value: Weapon
-      objectReference: {fileID: 0}
-    - target: {fileID: 9065512398566722290, guid: 9de6571ed8adf5845a0203cdb570cef0,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9065512398566722290, guid: 9de6571ed8adf5845a0203cdb570cef0,
-        type: 3}
-      propertyPath: m_Name
-      value: Jerzy
-      objectReference: {fileID: 0}
     - target: {fileID: 2610582415346065468, guid: 9de6571ed8adf5845a0203cdb570cef0,
         type: 3}
       propertyPath: m_Name
       value: Gun
-      objectReference: {fileID: 0}
-    - target: {fileID: 6641999444991226311, guid: 9de6571ed8adf5845a0203cdb570cef0,
-        type: 3}
-      propertyPath: m_Name
-      value: GrenadeThrower
       objectReference: {fileID: 0}
     - target: {fileID: 3078840136253150011, guid: 9de6571ed8adf5845a0203cdb570cef0,
         type: 3}
@@ -1914,6 +1934,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: d6220fe97b712634791019f57e2cd1cf, type: 2}
+    - target: {fileID: 187781300, guid: 9de6571ed8adf5845a0203cdb570cef0, type: 3}
+      propertyPath: jumpSpeed
+      value: 21
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9de6571ed8adf5845a0203cdb570cef0, type: 3}
 --- !u!1 &2138979958

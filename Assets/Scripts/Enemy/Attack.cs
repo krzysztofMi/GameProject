@@ -34,11 +34,11 @@ public class Attack : MonoBehaviour
             }
             if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !animator.IsInTransition(0))
             {
-                Target t = attackedObject.GetComponent<Target>();
+                ITarget t = attackedObject.GetComponent<ITarget>();
                 if (t != null)
                 {
-                    t.playerTakeDamage(damage);
-                    Debug.Log("Pozostałe życie: " + t.health);
+                    t.TakeDamage(damage);
+                    Debug.Log("Pozostałe życie: " + t.getHealth());
                 }
                 animator.Play("empty");
             }
