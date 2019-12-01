@@ -21,7 +21,6 @@ public class GumProjectile : MonoBehaviour
     void Update()
     {
         transform.position+=transform.forward*Time.deltaTime*speed;
-        //transform.position+=transform.forward*(speed*Time.deltaTime);
     }
 
     void OnCollisionEnter(Collision collision)

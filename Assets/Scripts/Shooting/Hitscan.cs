@@ -3,11 +3,14 @@ using UnityEngine;
 
 public class Hitscan : MonoBehaviour
 {
-
+    public KeyCode przyciskAktywacji;
     public float damage = 10f;
-    public float destroyTime;
-    private Camera cam;
+    public float destroyTime = 10f;
+    public float shooting_frequency = 1f;
+    private float shoot_time=0f;
     public GameObject slad;
+    private Camera cam;
+    private bool can_shoot=true;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,9 +19,25 @@ public class Hitscan : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if(can_shoot==true)
         {
-            Shoot();
+            if(Input.GetKeyDown(przyciskAktywacji))
+            {
+                Shoot();
+                can_shoot=false;
+            }
+        }
+        else
+        {
+            if(shoot_time<shooting_frequency)
+            {
+                shoot_time+=Time.deltaTime;
+            }
+            else
+            {
+                can_shoot=true;
+                shoot_time=0;
+            }
         }
     }
 
