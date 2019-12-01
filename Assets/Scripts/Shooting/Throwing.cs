@@ -9,36 +9,42 @@ public class Throwing : MonoBehaviour
     public float throwForce = 40f;
     public float shooting_frequency = 1f;
     public GameObject obiekt;
+    public GameObject pasekkolor;
     private Camera cam;
     private bool can_shoot=true;
-    private float shoot_time=0f;
+    private float shoot_time=1f;
     // Update is called once per frame
     void Start()
     {
+        shoot_time=shooting_frequency;
         cam = GameObject.Find("mainCamera").GetComponent<Camera>();
     }
     void Update()
     {
-if(can_shoot==true)
+        if(pasekkolor!=null)
         {
-            if(Input.GetKeyDown(przyciskAktywacji))
-            {
-                Throw();
-                can_shoot=false;
-            }
+            pasekkolor.transform.localScale=new Vector3(shoot_time/shooting_frequency,1f,1f);
         }
-        else
-        {
-            if(shoot_time<shooting_frequency)
+        if(can_shoot==true)
             {
-                shoot_time+=Time.deltaTime;
+                if(Input.GetKeyDown(przyciskAktywacji))
+                {
+                    Throw();
+                    can_shoot=false;
+                    shoot_time=0;
+                }
             }
             else
             {
-                can_shoot=true;
-                shoot_time=0;
+                if(shoot_time<shooting_frequency)
+                {
+                    shoot_time+=Time.deltaTime;
+                }
+                else
+                {
+                    can_shoot=true;
+                }
             }
-        }
     }
     void Throw()
     {

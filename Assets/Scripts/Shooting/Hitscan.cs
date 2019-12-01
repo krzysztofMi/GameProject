@@ -7,24 +7,31 @@ public class Hitscan : MonoBehaviour
     public float damage = 10f;
     public float destroyTime = 10f;
     public float shooting_frequency = 1f;
-    private float shoot_time=0f;
     public GameObject slad;
+    public GameObject pasekkolor;
+    private float shoot_time;
     private Camera cam;
     private bool can_shoot=true;
-    // Start is called before the first frame update
     void Start()
     {
+        shoot_time=shooting_frequency;
         cam = GameObject.Find("mainCamera").GetComponent<Camera>();
     }
     // Update is called once per frame
     void Update()
     {
+        if(pasekkolor!=null)
+        {
+            pasekkolor.transform.localScale=new Vector3(shoot_time/shooting_frequency,1f,1f);
+        }
+
         if(can_shoot==true)
         {
             if(Input.GetKeyDown(przyciskAktywacji))
             {
                 Shoot();
                 can_shoot=false;
+                shoot_time=0;
             }
         }
         else
@@ -36,7 +43,7 @@ public class Hitscan : MonoBehaviour
             else
             {
                 can_shoot=true;
-                shoot_time=0;
+                
             }
         }
     }
