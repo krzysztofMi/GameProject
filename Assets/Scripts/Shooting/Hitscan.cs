@@ -42,6 +42,7 @@ public class Hitscan : MonoBehaviour
             }
             else
             {
+                shoot_time=shooting_frequency;
                 can_shoot=true;
                 
             }
