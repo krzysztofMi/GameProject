@@ -14,7 +14,7 @@ public class FPSCameraMovement : MonoBehaviour
     private float mouseY;
     private float xRotation;
 
-
+ 
     void Update()
     {
         //zwroccie uwage na to ze do zarzadzania kamera obracam nie tylko sama kamera, ale 
@@ -33,4 +33,5 @@ public class FPSCameraMovement : MonoBehaviour
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f); //rotating the camera
         
     }
+
 }

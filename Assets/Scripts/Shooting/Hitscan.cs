@@ -1,21 +1,23 @@
-﻿
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Hitscan : MonoBehaviour
 {
     public KeyCode przyciskAktywacji;
     public float damage = 10f;
     public float destroyTime = 10f;
-    public float shooting_frequency = 1f;
-    public GameObject slad;
-    public GameObject pasekkolor;
+    public float shooting_frequency = 1f; //odstęp czasu między strzałami
+    public GameObject slad;//kulka zostawiona
+    public GameObject pasekkolor;//lewy dolny pasek
     private float shoot_time;
     private Camera cam;
     private bool can_shoot=true;
+    private float corruption;
+    private fpsPlayerMovement temp;
     void Start()
     {
         shoot_time=shooting_frequency;
         cam = GameObject.Find("mainCamera").GetComponent<Camera>();
+        temp = GameObject.Find("Player").GetComponent<fpsPlayerMovement>();
     }
     // Update is called once per frame
     void Update()
@@ -47,13 +49,15 @@ public class Hitscan : MonoBehaviour
                 
             }
         }
+        corruption=temp.getMoveLength()/100f;
+        if(corruption<0.02f)corruption=0f;
     }
 
     void Shoot()
     {
         Debug.Log("Strzelanie");
         RaycastHit hit;
-        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit))
+        if (Physics.Raycast(cam.transform.position, cam.transform.forward+corruptor(corruption), out hit))
         {
             Debug.Log("Namierzony obiekt: " + hit.transform.name);
             ITarget target = hit.transform.GetComponent<ITarget>();
@@ -65,5 +69,9 @@ public class Hitscan : MonoBehaviour
             GameObject obiekt=Instantiate(slad, hit.point, Quaternion.LookRotation(hit.normal));
             Destroy(obiekt, destroyTime);
         }
+    }
+    Vector3 corruptor(float max)
+    {
+        return new Vector3(Random.Range(-max,max),Random.Range(-max,max),Random.Range(-max,max));
     }
 }

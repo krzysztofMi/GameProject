@@ -19,7 +19,6 @@ public class fpsPlayerMovement : MonoBehaviour
     private Transform groundCheck;
     private CharacterController controller;
     private float speed;
-    
     private void Start()
     {
         GameObject gobject = GameObject.Find("PlayerGroundCheck");
@@ -55,8 +54,12 @@ public class fpsPlayerMovement : MonoBehaviour
                 move.z *= 2;
             }
         }
-
+            
         move.y += gravity;
         controller.Move(move * Time.deltaTime);
+    }
+    public float getMoveLength()
+    {
+        return move.magnitude;
     }
 }
